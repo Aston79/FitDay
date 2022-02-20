@@ -21,7 +21,8 @@ jobs:
 
       - run:
           name: Running tests
-          command: mvn -Dmaven.test.failure.ignore=true clean test -DsuiteXmlFile='src/test/resources/regression_multi_browsers.xml'
+          command: mvn clean test
+          # -Dmaven.test.failure.ignore=true clean test -DsuiteXmlFile='src/test/resources/regression_multi_browsers.xml'
       - run:
          name: Generate allure report
          command: mvn allure:report
