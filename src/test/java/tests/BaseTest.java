@@ -26,6 +26,7 @@ public abstract class BaseTest {
     @Parameters({"browser"})
     @BeforeMethod
     public void setUp() {
+
         log.info("Setup options and configurations.");
         if (browser.equals("chrome")) {
             Configuration.browser = "chrome";
@@ -34,6 +35,7 @@ public abstract class BaseTest {
         } else if (browser.equals("edge")) {
             Configuration.browser = "edge";
         }
+
         Configuration.baseUrl = System.getenv().getOrDefault("FITDAY_URL", PropertyReader.getProperty("fitDay.url")); //"https://www.fitday.com/fitness";
         username = System.getenv().getOrDefault("FITDAY_USERNAME", PropertyReader.getProperty("fitDay.username"));
         password = System.getenv().getOrDefault("FITDAY_PASSWORD", PropertyReader.getProperty("fitDay.password"));
