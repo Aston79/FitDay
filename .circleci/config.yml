@@ -22,14 +22,14 @@ jobs:
       - run:
           name: Running tests
           command: mvn -Dmaven.test.failure.ignore=true clean test -DsuiteXmlFile='src/test/resources/regression_multi_rowsers.xml'
-     - run:
+      - run:
          name: Generate allure report
          command: mvn allure:report
          when: always
       - store_test_results:
           path: target/surefire-reports/junitreports
           when: always
-     - store_artifacts:
+      - store_artifacts:
          path: target/site/allure-maven-plugin/
 workflows:
   version: 2
