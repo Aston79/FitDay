@@ -11,9 +11,10 @@ import static pages.LogOutPage.LOG_IN_BUTTON;
 public class LogOutTest extends BaseTest {
 
     @Test
-    public void logOut() {
+    public void logOut() throws InterruptedException {
         log.info("Open page fitday.com");
         loginPage.openPage();
+//        wait(30000);
         loginPage.login(username, password);
         logOutPage.loggingOut();
         log.info("Comparison of expected and actual");
