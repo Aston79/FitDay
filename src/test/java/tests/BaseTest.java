@@ -41,7 +41,7 @@ public abstract class BaseTest {
         password = System.getenv().getOrDefault("FITDAY_PASSWORD", PropertyReader.getProperty("fitDay.password"));
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
         System.setProperty("webdriver.gecko.driver", "C:\\Projects\\geckodriver-v0.30.0-win64\\GeckoDriver.exe");
-        Configuration.headless = true;
+//        Configuration.headless = true;
         Configuration.browserSize = "1280x960";
         Configuration.browserPosition = "0x0";
         Configuration.clickViaJs = true;

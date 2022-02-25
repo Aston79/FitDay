@@ -20,6 +20,7 @@ public class LogOutPage extends BasePage {
 
     public static final SelenideElement LOG_OUT_BUTTON = $(By.xpath("//*[@id=\"header-menu\"]/ul[1]/li[2]/a"));
     public static final SelenideElement LOG_IN_BUTTON = $(By.xpath("//*[@id=\"form-login\"]/p[4]/input"));
+    public static final SelenideElement IMAGE_OF_LOGIN_PAGE = $(By.xpath("//*[@id=\"category-page\"]/entry/div/a/img"));
 
     @Step("Logout")
     public void loggingOut() {

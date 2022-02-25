@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static pages.LogOutPage.IMAGE_OF_LOGIN_PAGE;
 import static pages.LogOutPage.LOG_IN_BUTTON;
 
 @Log4j2
@@ -18,6 +19,6 @@ public class LogOutTest extends BaseTest {
         loginPage.login(username, password);
         logOutPage.loggingOut();
         log.info("Comparison of expected and actual");
-        $(LOG_IN_BUTTON).shouldBe(visible);
+        $(IMAGE_OF_LOGIN_PAGE).shouldBe(visible);
     }
 }
