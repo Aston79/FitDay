@@ -39,8 +39,8 @@ public class LoginPage extends BasePage {
     @Description(value = "Login with valid data")
     public void login(String username, String password) {
         log.info("Login with valid data");
-        $(USERNAME_INPUT).sendKeys(username);
-        $(PASSWORD_INPUT).sendKeys(password);
+        $(USERNAME_INPUT).setValue(username);
+        $(PASSWORD_INPUT).setValue(password);
         $(LOGIN_BUTTON).click();
     }
 
