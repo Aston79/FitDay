@@ -12,13 +12,12 @@ import static pages.LogOutPage.LOG_IN_BUTTON;
 public class LogOutTest extends BaseTest {
 
     @Test
-    public void logOut() throws InterruptedException {
+    public void logOut() {
         log.info("Open page fitday.com");
         loginPage.openPage();
-//        wait(30000);
         loginPage.login(username, password);
         logOutPage.loggingOut();
         log.info("Comparison of expected and actual");
-        $(IMAGE_OF_LOGIN_PAGE).shouldBe(visible);
+        $(LOG_IN_BUTTON).shouldBe(visible);
     }
 }
